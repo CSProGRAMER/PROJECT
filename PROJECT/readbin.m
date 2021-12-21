@@ -1,13 +1,13 @@
-function [frame] = readbin (name, width, hight)
+function [frame] = readbin (name, width, height)
 fileID = fopen (name, 'r'); % data-fread(fileID);
 imageWidth = width; 
-imageHeight = hight; 
+imageHeight = height; 
 numColor = 1;
 newData = zeros(imageHeight, imageWidth); 
 newData=im2double(newData);
 l=1;
 count = 1;
-[v, count2] = fscanf(fileID, '%f');
+[v] = fscanf(fileID, '%f');
 for i = 1:imageHeight %for i 0 to maxColumn 
         for j = 1:imageWidth % for j 0 to maxRow 
             for k= 1:numColor

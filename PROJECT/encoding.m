@@ -35,10 +35,12 @@ function [cframe,yframe,cbframe,crframe] = encoding(iframe)
     imgycbcr(:,:,1) = im2uint8(B2Y);
     imgycbcr(:,:,2) = im2uint8(B2Cb);
     imgycbcr(:,:,3) = im2uint8(B2Cr);
-    yframe = imgycbcr(:,:,1);
-    cbframe = imresize (imgycbcr(:,:,2),0.5);
-    crframe = imresize (imgycbcr(:,:,3),0.5);
+    yframe = B2Y;
+    cbframe =B2Cb;
+    crframe =B2Cr;
+%     imtool(B2Y);
     cframe = imgycbcr;
+    
     
 %     cframe = ycbcr2rgb(imgycbcr);
 %     imtool(imgycbcr);

@@ -1,16 +1,16 @@
 function cframe = decoding(frame,yframe,cbframe,crframe)
 
 
-    cbframe = imresize (cbframe,2);
-    crframe = imresize (crframe,2);
+%     cbframe = imresize (cbframe,2);
+%     crframe = imresize (crframe,2);
 
     
     D = 8;
     T = dctmtx(D);
     %dct = @(block_struct) T * block_struct.data * T';
-    Y = im2double(yframe);
-    Cb = im2double(cbframe);
-    Cr = im2double(crframe);
+    Y = (yframe);
+    Cb =(cbframe);
+    Cr =(crframe);
     
 %     Y = im2double(frame(:,:,1));
 %     Cb = im2double(frame(:,:,2));

@@ -20,7 +20,6 @@ for r= 1:size (cbframe, 1)
     fprintf(fileID,"\n");
 end
 fclose(fileID); 
-imtool(cbframe)
 
 %%%%
 
@@ -32,4 +31,4 @@ for r= 1:size (crframe, 1)
     fprintf(fileID,"\n");
 end
 fclose(fileID); 
-imtool(crframe)
+end
